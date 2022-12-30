@@ -22,6 +22,3 @@ destination:
 syncPolicy:
   automated:
     prune: true
----
-
-    
