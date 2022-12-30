@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1                                                                                                                                │
+kind: Application
+metadata:
+  creationTimestamp: "2022-12-30T18:30:04Z"
+  generation: 34
+  name: jenkins
+  namespace: argocd
+  resourceVersion: "1380185"
+  uid: 7022aca6-ea3f-44c6-b06f-cfaf7798dcdc
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+project: default
+source:
+  repoURL: 'https://artsiomborisevich.github.io/helm-borisevich/'
+  targetRevision: 0.2.0
+  chart: jenkins-app
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: default
+syncPolicy:
+  automated:
+    prune: true
+---
+
+    
