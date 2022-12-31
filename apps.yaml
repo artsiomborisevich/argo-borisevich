@@ -10,6 +10,9 @@ spec:
 project: default
 source:
   chart: jenkins-app
+  helm:
+      valueFiles:
+      - values.yaml
   repoURL: https://artsiomborisevich.github.io/helm-borisevich/
   targetRevision: 0.2.0
 syncPolicy:
