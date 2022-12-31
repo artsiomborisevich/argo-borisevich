@@ -5,18 +5,13 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: ci-cd
     server: https://kubernetes.default.svc
 project: default
 source:
   chart: jenkins-app
-  helm:
-      valueFiles:
-      - values.yaml
   repoURL: https://artsiomborisevich.github.io/helm-borisevich/
   targetRevision: 0.2.0
 syncPolicy:
   automated:
     prune: true
-  syncOptions:
-  - CreateNamespace=true
