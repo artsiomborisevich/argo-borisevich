@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: jenkins
   namespace: argocd
-  resourceVersion: "1445575"
-  uid: 9127b35d-19f4-4726-815c-935537d0347f
 spec:
   destination:
     namespace: ci-cd
