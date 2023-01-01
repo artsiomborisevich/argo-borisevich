@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: ci-cd
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -14,7 +14,7 @@ spec:
       valueFiles:
       - values.yaml
     repoURL: https://artsiomborisevich.github.io/helm-borisevich/
-    targetRevision: 0.3.0
+    targetRevision: 0.4.0
   syncPolicy:
     automated:
       prune: true
