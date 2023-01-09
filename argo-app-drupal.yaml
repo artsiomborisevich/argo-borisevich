@@ -40,7 +40,7 @@ spec:
       valueFiles:
       - values.yaml
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 15.2.22
+    targetRevision: 12.5.12
   syncPolicy:
     automated:
       prune: true
