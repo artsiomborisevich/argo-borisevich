@@ -31,8 +31,10 @@ spec:
         value: "true"
       - name: ingress.hostname
         value: drupal-sa.k8s-3.sa
-      - name: ingress.ingressClassName
-        value: nginx
+      - name: ingress.apiversion
+        value: networking.k8s.io/v1
+      - name: ingress.annotations
+        value: kubernetes.io/ingress.class: nginx
       - name: ingress.pathType
         value: Prefix
       - name: service.type
