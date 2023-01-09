@@ -36,7 +36,7 @@ spec:
       - name: ingress.pathType
         value: Prefix
       - name: service.type
-        value: ClusterIP
+        value: LoadBalancer
       valueFiles:
       - values.yaml
     repoURL: https://charts.bitnami.com/bitnami
