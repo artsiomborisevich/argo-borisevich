@@ -22,7 +22,7 @@ spec:
       - name: externalDatabase.database
         value: drupal
       - name: global.storageClass
-        value: nfs-drupal
+        value: nfs
       - name: existingSecret
         value: argo-secrets-drupal
       - name: drupalEmail
