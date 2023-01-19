@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: jenkins
+  name: drupal
   namespace: argocd
 spec:
   destination:
@@ -9,9 +9,27 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: jenkins-app
-    repoURL: https://artsiomborisevich.github.io/helm-borisevich/
-    targetRevision: 0.4.0
+    chart: drupal
+    repoURL: https://artsiomborisevich.github.io/devops-project/
+    targetRevision: v1.0.2
+  syncPolicy:
+    automated:
+      prune: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: drupal
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: drupal
+    repoURL: https://artsiomborisevich.github.io/devops-project/
+    targetRevision: v1.0.5
   syncPolicy:
     automated:
       prune: true
