@@ -9,8 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://artsiomborisevich.github.io/devops-project/helm-releases/
-    targetRevision: 1.0.6
+    repoURL: https://artsiomborisevich.github.io/devops-project/
   syncPolicy:
     automated:
       prune: true
