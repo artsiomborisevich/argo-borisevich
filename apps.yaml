@@ -9,9 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: drupal
     repoURL: https://artsiomborisevich.github.io/devops-project/
-    targetRevision: v1.0.6
+    targetRevision: 1.0.6
   syncPolicy:
     automated:
       prune: true
