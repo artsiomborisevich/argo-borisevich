@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     chart: drupal
-    repoURL: https://artsiomborisevich.github.io/devops-project/
+    repoURL: https://artsiomborisevich.github.io/devops-project/helm-releases/
     targetRevision: v1.2.0
   syncPolicy:
     syncOptions:
