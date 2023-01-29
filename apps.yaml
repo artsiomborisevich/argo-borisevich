@@ -1,6 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: project_borisevich
   name: drupal
   namespace: argocd
 spec:
@@ -9,7 +11,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/artsiomborisevich/devops-project.git
+    chart: drupal
+    repoURL: https://artsiomborisevich.github.io/devops-project/
+    targetRevision: v1.2.0
   syncPolicy:
-    automated:
-      prune: true
+    syncOptions:
+    - CreateNamespace=true
